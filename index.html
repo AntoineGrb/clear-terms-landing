@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clear Terms - Comprendre les CGU en un clic</title>
+  <title>Clear Terms - Analysez vos CGU en toute transparence</title>
   <meta name="description" content="Scannez et comprenez instantanément les conditions d'utilisation de n'importe quel site web grâce à l'IA. Simple, rapide et transparent.">
 
   <!-- Fonts -->
@@ -51,6 +51,9 @@
       }
     }
   </script>
+
+  <!-- Translations -->
+  <script src="translations.js"></script>
 
   <style>
     body {
@@ -116,28 +119,52 @@
   <nav class="fixed top-0 left-0 right-0 z-50 glass-effect">
     <div class="px-6 py-4 mx-auto max-w-7xl">
       <div class="flex items-center justify-between">
-        <div class="flex items-center gap-3">
+        <a href="index.html" class="flex items-center gap-3">
           <div class="relative flex items-center justify-center w-10 h-10 rounded-lg gradient-bg">
+            <!-- Loupe -->
             <svg class="absolute w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
               <circle cx="11" cy="11" r="8"/>
               <path stroke-linecap="round" d="M21 21l-4.35-4.35"/>
             </svg>
+            <!-- Check à l'intérieur -->
             <svg class="absolute w-2.5 h-2.5 text-white" style="transform: translate(-1px, -1px);" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="4">
               <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
             </svg>
           </div>
           <span class="text-xl font-bold gradient-text">Clear Terms</span>
-        </div>
-
-        <div class="hidden gap-8 md:flex">
-          <a href="#features" class="text-sm font-medium text-gray-600 transition-colors hover:text-primary-600">Fonctionnalités</a>
-          <a href="#how-it-works" class="text-sm font-medium text-gray-600 transition-colors hover:text-primary-600">Comment ça marche</a>
-          <a href="#pricing" class="text-sm font-medium text-gray-600 transition-colors hover:text-primary-600">Tarifs</a>
-        </div>
-
-        <a href="https://chrome.google.com/webstore" target="_blank" rel="noopener" class="hidden px-6 py-2.5 text-sm font-semibold text-white transition-all rounded-lg md:block gradient-hover">
-          Installer
         </a>
+
+        <div class="flex items-center gap-6">
+          <div class="hidden gap-8 md:flex">
+            <a href="#features" class="text-sm font-medium text-gray-600 transition-colors hover:text-primary-600" data-i18n="navFeatures">Fonctionnalités</a>
+            <a href="#how-it-works" class="text-sm font-medium text-gray-600 transition-colors hover:text-primary-600" data-i18n="navHowItWorks">Comment ça marche</a>
+            <a href="#pricing" class="text-sm font-medium text-gray-600 transition-colors hover:text-primary-600" data-i18n="navPricing">Tarifs</a>
+          </div>
+
+          <!-- Language Selector -->
+          <div class="relative" id="language-dropdown">
+            <button id="lang-toggle" class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 transition-colors bg-white border border-gray-200 rounded-lg hover:bg-gray-50">
+              <span id="current-flag" class="text-lg">🇫🇷</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div id="lang-menu" class="absolute right-0 z-50 hidden w-32 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg">
+              <button data-lang="fr" class="flex items-center w-full gap-3 px-4 py-2 text-sm text-left text-gray-700 transition-colors hover:bg-gray-50 rounded-t-lg">
+                <span class="text-lg">🇫🇷</span>
+                <span>Français</span>
+              </button>
+              <button data-lang="en" class="flex items-center w-full gap-3 px-4 py-2 text-sm text-left text-gray-700 transition-colors hover:bg-gray-50 rounded-b-lg">
+                <span class="text-lg">🇬🇧</span>
+                <span>English</span>
+              </button>
+            </div>
+          </div>
+
+          <a href="https://chrome.google.com/webstore" target="_blank" rel="noopener" class="hidden px-6 py-2.5 text-sm font-semibold text-white transition-all rounded-lg md:block gradient-hover" data-i18n="navInstall">
+            Installer
+          </a>
+        </div>
       </div>
     </div>
   </nav>
@@ -153,15 +180,15 @@
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
               <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
             </svg>
-            <span>20 scans gratuits à l'installation</span>
+            <span data-i18n="heroBadge">20 scans gratuits à l'installation</span>
           </div>
 
-          <h1 class="text-5xl font-extrabold leading-tight md:text-6xl lg:text-7xl">
+          <h1 class="text-5xl font-extrabold leading-tight md:text-6xl lg:text-7xl" data-i18n="heroTitle">
             Les <span class="gradient-text">CGU</span> enfin lisibles. <br> En 30 secondes.
           </h1>
 
-          <p class="text-lg text-gray-600 md:text-xl">
-            Clear Terms résume les conditions d’utilisation des sites internet en points clairs et une note <strong>A–E</strong>. Voyez immédiatement ce qui est acceptable, ambigu ou risqué.
+          <p class="text-lg text-gray-600 md:text-xl" data-i18n="heroSubtitle">
+            Clear Terms résume les conditions d'utilisation des sites internet en points clairs et une note <strong>A–E</strong>. Voyez immédiatement ce qui est acceptable, ambigu ou risqué.
           </p>
 
           <div class="flex flex-col gap-4 sm:flex-row">
@@ -169,7 +196,7 @@
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"/>
               </svg>
-              Installer gratuitement
+              <span data-i18n="heroCtaPrimary">Installer gratuitement</span>
             </a>
 
             <a href="#how-it-works" class="flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-gray-700 transition-all bg-white border-2 border-gray-200 rounded-xl hover:border-primary-400 hover:bg-gray-50">
@@ -177,7 +204,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
               </svg>
-              Voir la démo
+              <span data-i18n="heroCtaSecondary">Voir la démo</span>
             </a>
           </div>
 
@@ -202,19 +229,19 @@
           <div class="relative z-10 p-6 bg-white shadow-2xl rounded-2xl w-96">
             <!-- Header -->
             <div class="px-4 py-3 mb-4 text-center text-white rounded-lg gradient-bg">
-              <h3 class="mb-1 text-lg font-semibold">Clear Terms</h3>
-              <p class="text-xs opacity-90">Analyse IA des CGU</p>
+              <h3 class="mb-1 text-lg font-semibold" data-i18n="mockupHeader">Clear Terms</h3>
+              <p class="text-xs opacity-90" data-i18n="mockupSubheader">Analyse IA des CGU</p>
             </div>
 
             <!-- Button -->
-            <div class="w-full py-3 mb-4 font-medium text-center text-white transition-colors rounded-lg bg-primary-500">
+            <div class="w-full py-3 mb-4 font-medium text-center text-white transition-colors rounded-lg bg-primary-500" data-i18n="mockupButton">
               Analyser cette page
             </div>
 
             <!-- Report Preview -->
             <div class="p-4 border rounded-lg">
               <div class="flex items-center justify-between mb-3">
-                <h4 class="text-base font-semibold text-gray-900">Facebook</h4>
+                <h4 class="text-base font-semibold text-gray-900" data-i18n="mockupSite">Facebook</h4>
                 <div class="flex items-center justify-center w-12 h-12 text-2xl font-bold text-white bg-yellow-500 rounded-full">C</div>
               </div>
 
@@ -226,12 +253,12 @@
 
               <div class="space-y-2">
                 <div class="p-2 border-l-4 border-red-500 rounded bg-red-50">
-                  <div class="text-xs font-semibold text-gray-900">Partage de données</div>
-                  <div class="text-xs text-gray-600">Vos données sont partagées avec des milliers de partenaires...</div>
+                  <div class="text-xs font-semibold text-gray-900" data-i18n="mockupDataSharing">Partage de données</div>
+                  <div class="text-xs text-gray-600" data-i18n="mockupDataSharingDesc">Vos données sont partagées avec des milliers de partenaires...</div>
                 </div>
                 <div class="p-2 border-l-4 rounded bg-amber-50 border-amber-500">
-                  <div class="text-xs font-semibold text-gray-900">Publicité ciblée</div>
-                  <div class="text-xs text-gray-600">Profil publicitaire créé basé sur votre activité...</div>
+                  <div class="text-xs font-semibold text-gray-900" data-i18n="mockupTargetedAds">Publicité ciblée</div>
+                  <div class="text-xs text-gray-600" data-i18n="mockupTargetedAdsDesc">Profil publicitaire créé basé sur votre activité...</div>
                 </div>
               </div>
             </div>
@@ -246,8 +273,8 @@
   <section id="features" class="px-6 py-20 bg-white/50">
     <div class="mx-auto max-w-7xl">
       <div class="mb-16 text-center">
-        <h2 class="mb-4 text-4xl font-bold md:text-5xl">Pourquoi <span class="gradient-text">Clear Terms</span> ?</h2>
-        <p class="text-xl text-gray-600">Simple, rapide, et transparent</p>
+        <h2 class="mb-4 text-4xl font-bold md:text-5xl" data-i18n="featuresTitle">Pourquoi <span class="gradient-text">Clear Terms</span> ?</h2>
+        <p class="text-xl text-gray-600" data-i18n="featuresSubtitle">Simple, rapide, et transparent</p>
       </div>
 
       <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -259,8 +286,8 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
             </svg>
           </div>
-          <h3 class="mb-3 text-xl font-bold">Compréhension instantanée</h3>
-          <p class="text-gray-600">Obtenez un résumé clair et une note en quelques secondes grâce à l'intelligence artificielle.</p>
+          <h3 class="mb-3 text-xl font-bold" data-i18n="feature1Title">Compréhension instantanée</h3>
+          <p class="text-gray-600" data-i18n="feature1Desc">Obtenez un résumé clair et une note en quelques secondes grâce à l'intelligence artificielle.</p>
         </div>
 
         <!-- Feature 2 -->
@@ -270,8 +297,8 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/>
             </svg>
           </div>
-          <h3 class="mb-3 text-xl font-bold">Détection automatique</h3>
-          <p class="text-gray-600">L'extension détecte automatiquement les pages de CGU et vous propose une analyse.</p>
+          <h3 class="mb-3 text-xl font-bold" data-i18n="feature2Title">Détection automatique</h3>
+          <p class="text-gray-600" data-i18n="feature2Desc">L'extension détecte automatiquement les pages de CGU et vous propose une analyse.</p>
         </div>
 
         <!-- Feature 3 -->
@@ -281,8 +308,8 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
             </svg>
           </div>
-          <h3 class="mb-3 text-xl font-bold">Note claire de A à E</h3>
-          <p class="text-gray-600">Comprenez en un coup d'œil si un site respecte vos droits et votre vie privée.</p>
+          <h3 class="mb-3 text-xl font-bold" data-i18n="feature3Title">Note claire de A à E</h3>
+          <p class="text-gray-600" data-i18n="feature3Desc">Comprenez en un coup d'œil si un site respecte vos droits et votre vie privée.</p>
         </div>
 
         <!-- Feature 4 -->
@@ -292,8 +319,8 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
             </svg>
           </div>
-          <h3 class="mb-3 text-xl font-bold">Alerte sur les principaux risques</h3>
-          <p class="text-gray-600">Collection de données, clauses intrusives, partage avec des tiers... Identifiés en 1 clic.</p>
+          <h3 class="mb-3 text-xl font-bold" data-i18n="feature4Title">Alerte sur les principaux risques</h3>
+          <p class="text-gray-600" data-i18n="feature4Desc">Collection de données, clauses intrusives, partage avec des tiers... Identifiés en 1 clic.</p>
         </div>
 
         <!-- Feature 5 -->
@@ -303,8 +330,8 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
             </svg>
           </div>
-          <h3 class="mb-3 text-xl font-bold">Respect de la vie privée</h3>
-          <p class="text-gray-600">Vos données restent privées. Aucun tracking, aucune revente de données.</p>
+          <h3 class="mb-3 text-xl font-bold" data-i18n="feature5Title">Respect de la vie privée</h3>
+          <p class="text-gray-600" data-i18n="feature5Desc">Vos données restent privées. Aucun tracking, aucune revente de données.</p>
         </div>
 
         <!-- Feature 6 -->
@@ -314,8 +341,8 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
             </svg>
           </div>
-          <h3 class="mb-3 text-xl font-bold">Historique consultable</h3>
-          <p class="text-gray-600">Retrouvez vos rapports à tout moment. Relancez une analyse quand vous le souhaitez.</p>
+          <h3 class="mb-3 text-xl font-bold" data-i18n="feature6Title">Historique consultable</h3>
+          <p class="text-gray-600" data-i18n="feature6Desc">Retrouvez vos rapports à tout moment. Relancez une analyse quand vous le souhaitez.</p>
         </div>
 
       </div>
@@ -326,8 +353,8 @@
   <section id="how-it-works" class="px-6 py-20">
     <div class="mx-auto max-w-7xl">
       <div class="mb-16 text-center">
-        <h2 class="mb-4 text-4xl font-bold md:text-5xl">Comment ça <span class="gradient-text">fonctionne</span> ?</h2>
-        <p class="text-xl text-gray-600">En 3 étapes simples</p>
+        <h2 class="mb-4 text-4xl font-bold md:text-5xl" data-i18n="howTitle">Comment ça <span class="gradient-text">fonctionne</span> ?</h2>
+        <p class="text-xl text-gray-600" data-i18n="howSubtitle">En 3 étapes simples</p>
       </div>
 
       <div class="grid gap-12 md:grid-cols-3">
@@ -337,8 +364,8 @@
           <div class="flex items-center justify-center w-20 h-20 mx-auto mb-6 text-3xl font-bold text-white rounded-full gradient-bg">
             1
           </div>
-          <h3 class="mb-3 text-2xl font-bold">Installez l'extension</h3>
-          <p class="text-gray-600">Gratuite. 20 analyses offertes. Aucun compte requis.</p>
+          <h3 class="mb-3 text-2xl font-bold" data-i18n="step1Title">Installez l'extension</h3>
+          <p class="text-gray-600" data-i18n="step1Desc">Gratuite. 20 analyses offertes. Aucun compte requis.</p>
 
           <!-- Arrow -->
           <svg class="absolute hidden w-12 h-12 md:block top-10 -right-6 text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -351,8 +378,8 @@
           <div class="flex items-center justify-center w-20 h-20 mx-auto mb-6 text-3xl font-bold text-white rounded-full gradient-bg">
             2
           </div>
-          <h3 class="mb-3 text-2xl font-bold">Naviguez comme d'habitude</h3>
-          <p class="text-gray-600">Sur une page de CGU, vous êtes alerté et vous pouvez lancer une analyse.</p>
+          <h3 class="mb-3 text-2xl font-bold" data-i18n="step2Title">Naviguez comme d'habitude</h3>
+          <p class="text-gray-600" data-i18n="step2Desc">Sur une page de CGU, vous êtes alerté et vous pouvez lancer une analyse.</p>
 
           <!-- Arrow -->
           <svg class="absolute hidden w-12 h-12 md:block top-10 -right-6 text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -365,8 +392,8 @@
           <div class="flex items-center justify-center w-20 h-20 mx-auto mb-6 text-3xl font-bold text-white rounded-full gradient-bg">
             3
           </div>
-          <h3 class="mb-3 text-2xl font-bold">Obtenez un rapport clair </h3>
-          <p class="text-gray-600">En quelques secondes, comprenez réellement le contenu des CGU.</p>
+          <h3 class="mb-3 text-2xl font-bold" data-i18n="step3Title">Obtenez un rapport clair </h3>
+          <p class="text-gray-600" data-i18n="step3Desc">En quelques secondes, comprenez réellement le contenu des CGU.</p>
         </div>
 
       </div>
@@ -387,9 +414,9 @@
                     <svg class="w-5 h-5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
                       <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                     </svg>
-                    <span class="text-sm font-semibold text-gray-900">Sécurité</span>
+                    <span class="text-sm font-semibold text-gray-900" data-i18n="demoSecurity">Sécurité</span>
                   </div>
-                  <p class="text-xs text-gray-600">Chiffrement AES-256, données sécurisées</p>
+                  <p class="text-xs text-gray-600" data-i18n="demoSecurityDesc">Chiffrement AES-256, données sécurisées</p>
                 </div>
 
                 <div class="p-4 bg-white border-l-4 rounded-lg shadow-sm border-amber-500">
@@ -397,9 +424,9 @@
                     <svg class="w-5 h-5 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
                       <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
                     </svg>
-                    <span class="text-sm font-semibold text-gray-900">Partage</span>
+                    <span class="text-sm font-semibold text-gray-900" data-i18n="demoSharing">Partage</span>
                   </div>
-                  <p class="text-xs text-gray-600">Données partagées avec des partenaires publicitaires</p>
+                  <p class="text-xs text-gray-600" data-i18n="demoSharingDesc">Données partagées avec des partenaires publicitaires</p>
                 </div>
 
                 <div class="p-4 bg-white border-l-4 border-red-500 rounded-lg shadow-sm">
@@ -407,9 +434,9 @@
                     <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
                       <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
                     </svg>
-                    <span class="text-sm font-semibold text-gray-900">Rétention</span>
+                    <span class="text-sm font-semibold text-gray-900" data-i18n="demoRetention">Rétention</span>
                   </div>
-                  <p class="text-xs text-gray-600">Conservation indéfinie des données personnelles</p>
+                  <p class="text-xs text-gray-600" data-i18n="demoRetentionDesc">Conservation indéfinie des données personnelles</p>
                 </div>
               </div>
             </div>
@@ -426,59 +453,59 @@
         <div class="grid items-center gap-8 md:grid-cols-2">
 
           <div>
-            <div class="inline-block px-4 py-1 mb-4 text-sm font-semibold rounded-full bg-primary-100 text-primary-700">
+            <div class="inline-block px-4 py-1 mb-4 text-sm font-semibold rounded-full bg-primary-100 text-primary-700" data-i18n="pricingBadge">
               Tarification transparente
             </div>
-            <h2 class="mb-4 text-3xl font-bold md:text-4xl">Commencez <span class="gradient-text">gratuitement</span></h2>
-            <p class="mb-6 text-lg text-gray-600">20 analyses offertes à l'installation. Achetez des crédits seulement si vous en avez besoin.</p>
+            <h2 class="mb-4 text-3xl font-bold md:text-4xl" data-i18n="pricingTitle">Commencez <span class="gradient-text">gratuitement</span></h2>
+            <p class="mb-6 text-lg text-gray-600" data-i18n="pricingSubtitle">20 analyses offertes à l'installation. Achetez des crédits seulement si vous en avez besoin.</p>
 
             <div class="space-y-3">
               <div class="flex items-center gap-3">
                 <svg class="flex-shrink-0 w-6 h-6 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
-                <span class="text-gray-700">20 scans gratuits sans carte bancaire</span>
+                <span class="text-gray-700" data-i18n="pricingFeature1">20 scans gratuits sans carte bancaire</span>
               </div>
               <div class="flex items-center gap-3">
                 <svg class="flex-shrink-0 w-6 h-6 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
-                <span class="text-gray-700">Historique illimité et gratuit</span>
+                <span class="text-gray-700" data-i18n="pricingFeature2">Historique illimité et gratuit</span>
               </div>
               <div class="flex items-center gap-3">
                 <svg class="flex-shrink-0 w-6 h-6 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
-                <span class="text-gray-700">Recharges à partir de 2€</span>
+                <span class="text-gray-700" data-i18n="pricingFeature3">Recharges à partir de 2€</span>
               </div>
               <div class="flex items-center gap-3">
                 <svg class="flex-shrink-0 w-6 h-6 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
-                <span class="text-gray-700">Pas d'abonnement, payez à l'usage</span>
+                <span class="text-gray-700" data-i18n="pricingFeature4">Pas d'abonnement, payez à l'usage</span>
               </div>
             </div>
           </div>
 
           <div class="p-8 rounded-2xl bg-gradient-to-br from-primary-500 to-secondary-500">
             <div class="text-center text-white">
-              <div class="mb-2 text-sm font-medium opacity-90">À partir de</div>
+              <div class="mb-2 text-sm font-medium opacity-90" data-i18n="pricingFrom">À partir de</div>
               <div class="flex items-baseline justify-center mb-1">
                 <span class="text-5xl font-bold">2</span>
                 <span class="ml-1 text-2xl">€</span>
               </div>
-              <div class="mb-6 text-sm opacity-90">20 analyses supplémentaires</div>
+              <div class="mb-6 text-sm opacity-90" data-i18n="pricingScans">20 analyses supplémentaires</div>
 
               <div class="p-4 mb-6 rounded-lg bg-white/10 backdrop-blur-sm">
-                <div class="text-xs font-medium opacity-75">Packs disponibles</div>
+                <div class="text-xs font-medium opacity-75" data-i18n="pricingPacksTitle">Packs disponibles</div>
                 <div class="mt-2 space-y-1 text-sm">
-                  <div>20 scans • 2€</div>
-                  <div>100 scans • 5€</div>
-                  <div>1000 scans • 20€</div>
+                  <div data-i18n="pricingPack1">20 scans • 2€</div>
+                  <div data-i18n="pricingPack2">100 scans • 5€</div>
+                  <div data-i18n="pricingPack3">1000 scans • 20€</div>
                 </div>
               </div>
 
-              <a href="#install" class="block w-full py-3 font-semibold text-center transition-all bg-white rounded-lg text-primary-600 hover:bg-gray-100">
+              <a href="#install" class="block w-full py-3 font-semibold text-center transition-all bg-white rounded-lg text-primary-600 hover:bg-gray-100" data-i18n="pricingCta">
                 Commencer gratuitement
               </a>
             </div>
@@ -497,17 +524,17 @@
         <div class="absolute bottom-0 left-0 w-64 h-64 -mb-32 -ml-32 bg-white rounded-full opacity-20"></div>
 
         <div class="relative z-10">
-          <h2 class="mb-4 text-4xl font-bold md:text-5xl">Prêt à reprendre le contrôle ?</h2>
-          <p class="mb-8 text-xl opacity-90">Installez Clear Terms et voyez clairement ce que vous acceptez.</p>
+          <h2 class="mb-4 text-4xl font-bold md:text-5xl" data-i18n="ctaTitle">Prêt à reprendre le contrôle ?</h2>
+          <p class="mb-8 text-xl opacity-90" data-i18n="ctaSubtitle">Installez Clear Terms et voyez clairement ce que vous acceptez.</p>
 
           <a href="https://chrome.google.com/webstore" target="_blank" rel="noopener" class="inline-flex items-center gap-3 px-8 py-4 text-lg font-semibold transition-all bg-white rounded-xl text-primary-600 hover:bg-gray-100 hover:scale-105">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-.84 4.67h1.68v8.36h-1.68V4.67zM12 18a1.5 1.5 0 110-3 1.5 1.5 0 010 3z"/>
             </svg>
-            Ajouter à Chrome - C'est gratuit
+            <span data-i18n="ctaButton">Ajouter à Chrome - C'est gratuit</span>
           </a>
 
-          <p class="mt-4 text-sm opacity-75">✓ Installation instantanée • ✓ 20 scans offerts • ✓ Aucun compte requis</p>
+          <p class="mt-4 text-sm opacity-75" data-i18n="ctaBenefits">✓ Installation instantanée • ✓ 20 scans offerts • ✓ Aucun compte requis</p>
         </div>
       </div>
     </div>
@@ -531,30 +558,30 @@
             </div>
             <span class="text-lg font-bold text-white">Clear Terms</span>
           </div>
-          <p class="text-sm text-gray-400">Analysez vos CGU en toute transparence grâce à l'intelligence artificielle.</p>
+          <p class="text-sm text-gray-400" data-i18n="footerTagline">Analysez vos CGU en toute transparence grâce à l'intelligence artificielle.</p>
         </div>
 
         <div>
-          <h4 class="mb-4 text-sm font-semibold text-white">Liens rapides</h4>
+          <h4 class="mb-4 text-sm font-semibold text-white" data-i18n="footerQuickLinks">Liens rapides</h4>
           <div class="space-y-2">
-            <a href="#features" class="block text-sm text-gray-400 transition-colors hover:text-white">Fonctionnalités</a>
-            <a href="#how-it-works" class="block text-sm text-gray-400 transition-colors hover:text-white">Comment ça marche</a>
-            <a href="#pricing" class="block text-sm text-gray-400 transition-colors hover:text-white">Tarifs</a>
+            <a href="#features" class="block text-sm text-gray-400 transition-colors hover:text-white" data-i18n="navFeatures">Fonctionnalités</a>
+            <a href="#how-it-works" class="block text-sm text-gray-400 transition-colors hover:text-white" data-i18n="navHowItWorks">Comment ça marche</a>
+            <a href="#pricing" class="block text-sm text-gray-400 transition-colors hover:text-white" data-i18n="navPricing">Tarifs</a>
           </div>
         </div>
 
         <div>
-          <h4 class="mb-4 text-sm font-semibold text-white">Contact</h4>
+          <h4 class="mb-4 text-sm font-semibold text-white" data-i18n="footerContact">Contact</h4>
           <div class="space-y-2">
             <a href="mailto:cleartermsapp@outlook.com" class="block text-sm text-gray-400 transition-colors hover:text-white">cleartermsapp@outlook.com</a>
-            <a href="terms.html" class="block text-sm text-gray-400 transition-colors hover:text-white">Conditions d'utilisation</a>
+            <a href="terms.html" class="block text-sm text-gray-400 transition-colors hover:text-white" data-i18n="footerTerms">Conditions d'utilisation</a>
           </div>
         </div>
 
       </div>
 
       <div class="pt-8 mt-8 text-center border-t border-gray-800">
-        <p class="text-sm text-gray-400">© 2025 Clear Terms. Tous droits réservés.</p>
+        <p class="text-sm text-gray-400" data-i18n="footerCopyright">© 2025 Clear Terms. Tous droits réservés.</p>
       </div>
     </div>
   </footer>

@@ -52,6 +52,9 @@
     }
   </script>
 
+  <!-- Translations -->
+  <script src="translations.js"></script>
+
   <style>
     body {
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
@@ -101,7 +104,29 @@
           <span class="text-xl font-bold gradient-text">Clear Terms</span>
         </a>
 
-        <a href="index.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-primary-600">← Retour à la page</a>
+        <div class="flex items-center gap-6">
+          <!-- Language Selector -->
+          <div class="relative" id="language-dropdown">
+            <button id="lang-toggle" class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 transition-colors bg-white border border-gray-200 rounded-lg hover:bg-gray-50">
+              <span id="current-flag" class="text-lg">🇫🇷</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div id="lang-menu" class="absolute right-0 z-50 hidden w-32 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg">
+              <button data-lang="fr" class="flex items-center w-full gap-3 px-4 py-2 text-sm text-left text-gray-700 transition-colors hover:bg-gray-50 rounded-t-lg">
+                <span class="text-lg">🇫🇷</span>
+                <span>Français</span>
+              </button>
+              <button data-lang="en" class="flex items-center w-full gap-3 px-4 py-2 text-sm text-left text-gray-700 transition-colors hover:bg-gray-50 rounded-b-lg">
+                <span class="text-lg">🇬🇧</span>
+                <span>English</span>
+              </button>
+            </div>
+          </div>
+
+          <a href="index.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-primary-600" data-i18n="termsBackToHome">← Retour à la page</a>
+        </div>
       </div>
     </div>
   </nav>
@@ -111,143 +136,143 @@
     <div class="max-w-4xl mx-auto">
       <div class="p-8 bg-white shadow-xl md:p-12 rounded-3xl">
 
-        <h1 class="mb-6 text-4xl font-bold md:text-5xl gradient-text">Conditions de Service</h1>
+        <h1 class="mb-6 text-4xl font-bold md:text-5xl gradient-text" data-i18n="termsTitle">Conditions de Service</h1>
 
         <div class="space-y-6 text-sm leading-relaxed text-gray-700">
-          <p class="italic text-gray-500">Date d'effet : 6 octobre 2025</p>
+          <p class="italic text-gray-500" data-i18n="termsEffectiveDate">Date d'effet : 6 octobre 2025</p>
 
-          <p>Bienvenue sur Clear Terms, un outil conçu pour aider les utilisateurs à mieux comprendre les conditions d'utilisation et politiques de confidentialité des services numériques. En installant ou en utilisant l'extension Clear Terms, vous acceptez d'être lié par les présentes Conditions de Service.</p>
-          <p>Veuillez les lire attentivement.</p>
+          <p data-i18n="termsIntro1">Bienvenue sur Clear Terms, un outil conçu pour aider les utilisateurs à mieux comprendre les conditions d'utilisation et politiques de confidentialité des services numériques. En installant ou en utilisant l'extension Clear Terms, vous acceptez d'être lié par les présentes Conditions de Service.</p>
+          <p data-i18n="termsIntro2">Veuillez les lire attentivement.</p>
 
           <section class="pt-6">
-            <h2 class="mb-3 text-2xl font-bold text-gray-900">1. Présentation</h2>
-            <p>Clear Terms est un outil qui identifie les clauses clés et les risques couramment présents dans les conditions d'utilisation et politiques de confidentialité en ligne. Il fournit une évaluation de risque et une analyse basées sur des documents publics. Nous nous efforçons d'aider les utilisateurs à prendre des décisions éclairées, mais nous ne pouvons garantir l'exhaustivité ou l'exactitude juridique dans tous les contextes.</p>
+            <h2 class="mb-3 text-2xl font-bold text-gray-900" data-i18n="terms1Title">1. Présentation</h2>
+            <p data-i18n="terms1Content">Clear Terms est un outil qui identifie les clauses clés et les risques couramment présents dans les conditions d'utilisation et politiques de confidentialité en ligne. Il fournit une évaluation de risque et une analyse basées sur des documents publics. Nous nous efforçons d'aider les utilisateurs à prendre des décisions éclairées, mais nous ne pouvons garantir l'exhaustivité ou l'exactitude juridique dans tous les contextes.</p>
           </section>
 
           <section class="pt-6">
-            <h2 class="mb-3 text-2xl font-bold text-gray-900">2. Absence de conseil juridique</h2>
-            <p>Clear Terms n'est pas un cabinet d'avocats, et les informations fournies via l'extension ne constituent pas un conseil juridique.</p>
-            <p class="mt-2">Vous comprenez et acceptez que :</p>
+            <h2 class="mb-3 text-2xl font-bold text-gray-900" data-i18n="terms2Title">2. Absence de conseil juridique</h2>
+            <p data-i18n="terms2Content1">Clear Terms n'est pas un cabinet d'avocats, et les informations fournies via l'extension ne constituent pas un conseil juridique.</p>
+            <p class="mt-2" data-i18n="terms2Content2">Vous comprenez et acceptez que :</p>
             <ul class="pl-5 mt-2 space-y-2 list-disc">
-              <li>Clear Terms ne remplace pas la consultation d'un avocat qualifié.</li>
-              <li>Les alertes, exemples et résumés que nous fournissons sont uniquement informatifs et peuvent ne pas s'appliquer à votre situation spécifique.</li>
-              <li>Si vous avez besoin de conseils juridiques ou d'une représentation légale, vous devez contacter un avocat agréé dans votre juridiction.</li>
-              <li>L'utilisation de Clear Terms ne crée pas de relation avocat-client.</li>
+              <li data-i18n="terms2Li1">Clear Terms ne remplace pas la consultation d'un avocat qualifié.</li>
+              <li data-i18n="terms2Li2">Les alertes, exemples et résumés que nous fournissons sont uniquement informatifs et peuvent ne pas s'appliquer à votre situation spécifique.</li>
+              <li data-i18n="terms2Li3">Si vous avez besoin de conseils juridiques ou d'une représentation légale, vous devez contacter un avocat agréé dans votre juridiction.</li>
+              <li data-i18n="terms2Li4">L'utilisation de Clear Terms ne crée pas de relation avocat-client.</li>
             </ul>
           </section>
 
           <section class="pt-6">
-            <h2 class="mb-3 text-2xl font-bold text-gray-900">3. Comptes utilisateur et données</h2>
-            <p>Nous collectons uniquement le minimum de données nécessaire pour fournir le service. Actuellement, aucune donnée personnelle identifiable n'est collectée. Les analyses sont mises en cache de manière anonyme (par hash du contenu) pour améliorer les performances. Ces données ne sont jamais vendues ou partagées avec des tiers.</p>
+            <h2 class="mb-3 text-2xl font-bold text-gray-900" data-i18n="terms3Title">3. Comptes utilisateur et données</h2>
+            <p data-i18n="terms3Content">Nous collectons uniquement le minimum de données nécessaire pour fournir le service. Actuellement, aucune donnée personnelle identifiable n'est collectée. Les analyses sont mises en cache de manière anonyme (par hash du contenu) pour améliorer les performances. Ces données ne sont jamais vendues ou partagées avec des tiers.</p>
           </section>
 
           <section class="pt-6">
-            <h2 class="mb-3 text-2xl font-bold text-gray-900">4. Exactitude et limitations</h2>
-            <p>Bien que nous visions à fournir des informations précises et à jour :</p>
+            <h2 class="mb-3 text-2xl font-bold text-gray-900" data-i18n="terms4Title">4. Exactitude et limitations</h2>
+            <p data-i18n="terms4Content">Bien que nous visions à fournir des informations précises et à jour :</p>
             <ul class="pl-5 mt-2 space-y-2 list-disc">
-              <li>Nous ne garantissons pas l'exhaustivité, l'exactitude ou la force exécutoire juridique de tout résumé ou évaluation de risque fourni.</li>
-              <li>Les conditions d'utilisation changent fréquemment, et notre base de données peut ne pas toujours refléter la version la plus récente d'une politique donnée.</li>
-              <li>Notre analyse est basée sur des processus de révision automatisés et manuels, qui peuvent avoir des limitations ou des cas particuliers.</li>
+              <li data-i18n="terms4Li1">Nous ne garantissons pas l'exhaustivité, l'exactitude ou la force exécutoire juridique de tout résumé ou évaluation de risque fourni.</li>
+              <li data-i18n="terms4Li2">Les conditions d'utilisation changent fréquemment, et notre base de données peut ne pas toujours refléter la version la plus récente d'une politique donnée.</li>
+              <li data-i18n="terms4Li3">Notre analyse est basée sur des processus de révision automatisés et manuels, qui peuvent avoir des limitations ou des cas particuliers.</li>
             </ul>
           </section>
 
           <section class="pt-6">
-            <h2 class="mb-3 text-2xl font-bold text-gray-900">5. Propriété intellectuelle</h2>
-            <p>Le nom Clear Terms, le logo, le logiciel et le contenu original sont la propriété intellectuelle de ses créateurs. Vous ne pouvez pas :</p>
+            <h2 class="mb-3 text-2xl font-bold text-gray-900" data-i18n="terms5Title">5. Propriété intellectuelle</h2>
+            <p data-i18n="terms5Content">Le nom Clear Terms, le logo, le logiciel et le contenu original sont la propriété intellectuelle de ses créateurs. Vous ne pouvez pas :</p>
             <ul class="pl-5 mt-2 space-y-2 list-disc">
-              <li>Faire de la rétro-ingénierie ou réutiliser l'extension</li>
-              <li>Revendre ou distribuer notre analyse sans permission</li>
-              <li>Présenter nos résumés comme des avis juridiques</li>
+              <li data-i18n="terms5Li1">Faire de la rétro-ingénierie ou réutiliser l'extension</li>
+              <li data-i18n="terms5Li2">Revendre ou distribuer notre analyse sans permission</li>
+              <li data-i18n="terms5Li3">Présenter nos résumés comme des avis juridiques</li>
             </ul>
           </section>
 
           <section class="pt-6">
-            <h2 class="mb-3 text-2xl font-bold text-gray-900">6. Conduite de l'utilisateur</h2>
-            <p>Vous acceptez de ne pas :</p>
+            <h2 class="mb-3 text-2xl font-bold text-gray-900" data-i18n="terms6Title">6. Conduite de l'utilisateur</h2>
+            <p data-i18n="terms6Content">Vous acceptez de ne pas :</p>
             <ul class="pl-5 mt-2 space-y-2 list-disc">
-              <li>Utiliser l'extension de manière abusive pour du scraping, de l'automation ou du spam</li>
-              <li>Tenter de modifier le comportement de l'extension</li>
-              <li>Prétendre que les informations fournies par Clear Terms constituent une autorité juridique</li>
+              <li data-i18n="terms6Li1">Utiliser l'extension de manière abusive pour du scraping, de l'automation ou du spam</li>
+              <li data-i18n="terms6Li2">Tenter de modifier le comportement de l'extension</li>
+              <li data-i18n="terms6Li3">Prétendre que les informations fournies par Clear Terms constituent une autorité juridique</li>
             </ul>
           </section>
 
           <section class="pt-6">
-            <h2 class="mb-3 text-2xl font-bold text-gray-900">7. Résiliation</h2>
-            <p>Nous nous réservons le droit de suspendre ou de résilier votre accès à l'extension si :</p>
+            <h2 class="mb-3 text-2xl font-bold text-gray-900" data-i18n="terms7Title">7. Résiliation</h2>
+            <p data-i18n="terms7Content">Nous nous réservons le droit de suspendre ou de résilier votre accès à l'extension si :</p>
             <ul class="pl-5 mt-2 space-y-2 list-disc">
-              <li>Vous violez ces conditions</li>
-              <li>Vous utilisez l'extension d'une manière qui nuit à autrui, viole la loi ou compromet l'intégrité du service</li>
+              <li data-i18n="terms7Li1">Vous violez ces conditions</li>
+              <li data-i18n="terms7Li2">Vous utilisez l'extension d'une manière qui nuit à autrui, viole la loi ou compromet l'intégrité du service</li>
             </ul>
           </section>
 
           <section class="pt-6">
-            <h2 class="mb-3 text-2xl font-bold text-gray-900">8. Exclusion de garanties</h2>
-            <p>L'extension Clear Terms est fournie "en l'état" et "selon disponibilité" sans garanties d'aucune sorte. Nous déclinons toutes garanties expresses ou implicites, y compris, mais sans s'y limiter :</p>
+            <h2 class="mb-3 text-2xl font-bold text-gray-900" data-i18n="terms8Title">8. Exclusion de garanties</h2>
+            <p data-i18n="terms8Content">L'extension Clear Terms est fournie "en l'état" et "selon disponibilité" sans garanties d'aucune sorte. Nous déclinons toutes garanties expresses ou implicites, y compris, mais sans s'y limiter :</p>
             <ul class="pl-5 mt-2 space-y-2 list-disc">
-              <li>Qualité marchande</li>
-              <li>Adéquation à un usage particulier</li>
-              <li>Non-violation</li>
+              <li data-i18n="terms8Li1">Qualité marchande</li>
+              <li data-i18n="terms8Li2">Adéquation à un usage particulier</li>
+              <li data-i18n="terms8Li3">Non-violation</li>
             </ul>
-            <p class="mt-2">Nous ne garantissons pas que l'extension sera exempte d'erreurs, ininterrompue ou totalement exacte.</p>
+            <p class="mt-2" data-i18n="terms8Content2">Nous ne garantissons pas que l'extension sera exempte d'erreurs, ininterrompue ou totalement exacte.</p>
           </section>
 
           <section class="pt-6">
-            <h2 class="mb-3 text-2xl font-bold text-gray-900">9. Limitation de responsabilité</h2>
-            <p>Dans toute la mesure permise par la loi, Clear Terms (et ses créateurs, équipe et affiliés) ne pourra être tenu responsable de :</p>
+            <h2 class="mb-3 text-2xl font-bold text-gray-900" data-i18n="terms9Title">9. Limitation de responsabilité</h2>
+            <p data-i18n="terms9Content">Dans toute la mesure permise par la loi, Clear Terms (et ses créateurs, équipe et affiliés) ne pourra être tenu responsable de :</p>
             <ul class="pl-5 mt-2 space-y-2 list-disc">
-              <li>Tout dommage indirect, accessoire ou consécutif</li>
-              <li>Toute perte de données, de profit ou d'opportunité commerciale</li>
-              <li>Toute décision que vous prenez sur la base de notre contenu</li>
+              <li data-i18n="terms9Li1">Tout dommage indirect, accessoire ou consécutif</li>
+              <li data-i18n="terms9Li2">Toute perte de données, de profit ou d'opportunité commerciale</li>
+              <li data-i18n="terms9Li3">Toute décision que vous prenez sur la base de notre contenu</li>
             </ul>
-            <p class="mt-2">Votre seul recours en cas d'insatisfaction avec le service est de cesser de l'utiliser.</p>
+            <p class="mt-2" data-i18n="terms9Content2">Votre seul recours en cas d'insatisfaction avec le service est de cesser de l'utiliser.</p>
           </section>
 
           <section class="pt-6">
-            <h2 class="mb-3 text-2xl font-bold text-gray-900">10. Droit applicable et conformité</h2>
-            <p>Ces conditions sont régies et interprétées conformément aux lois françaises et aux réglementations européennes, notamment le Règlement Général sur la Protection des Données (RGPD). Nous nous engageons à protéger vos données personnelles conformément au RGPD et à respecter vos droits d'accès, de rectification, d'effacement et de portabilité des données. Tout litige sera traité exclusivement par les tribunaux compétents en France.</p>
+            <h2 class="mb-3 text-2xl font-bold text-gray-900" data-i18n="terms10Title">10. Droit applicable et conformité</h2>
+            <p data-i18n="terms10Content">Ces conditions sont régies et interprétées conformément aux lois françaises et aux réglementations européennes, notamment le Règlement Général sur la Protection des Données (RGPD). Nous nous engageons à protéger vos données personnelles conformément au RGPD et à respecter vos droits d'accès, de rectification, d'effacement et de portabilité des données. Tout litige sera traité exclusivement par les tribunaux compétents en France.</p>
           </section>
 
           <section class="pt-6">
-            <h2 class="mb-3 text-2xl font-bold text-gray-900">11. Modifications de ces conditions</h2>
-            <p>Nous pouvons mettre à jour ces Conditions de Service de temps à autre. Si nous apportons des modifications importantes, nous vous en informerons via l'extension avec un délai de préavis de 30 jours. Si vous n'acceptez pas les nouvelles conditions, vous pouvez cesser d'utiliser l'extension en la désinstallant avant l'entrée en vigueur des modifications. L'utilisation continue du service après ce délai constitue votre acceptation des nouvelles conditions.</p>
+            <h2 class="mb-3 text-2xl font-bold text-gray-900" data-i18n="terms11Title">11. Modifications de ces conditions</h2>
+            <p data-i18n="terms11Content">Nous pouvons mettre à jour ces Conditions de Service de temps à autre. Si nous apportons des modifications importantes, nous vous en informerons via l'extension avec un délai de préavis de 30 jours. Si vous n'acceptez pas les nouvelles conditions, vous pouvez cesser d'utiliser l'extension en la désinstallant avant l'entrée en vigueur des modifications. L'utilisation continue du service après ce délai constitue votre acceptation des nouvelles conditions.</p>
           </section>
 
           <section class="pt-6">
-            <h2 class="mb-3 text-2xl font-bold text-gray-900">12. Paiement et crédits</h2>
-            <p>Clear Terms fonctionne sur un système de crédits d'analyse. Les 20 premières analyses sont gratuites pour découvrir le service.</p>
+            <h2 class="mb-3 text-2xl font-bold text-gray-900" data-i18n="terms12Title">12. Paiement et crédits</h2>
+            <p data-i18n="terms12Content">Clear Terms fonctionne sur un système de crédits d'analyse. Les 20 premières analyses sont gratuites pour découvrir le service.</p>
 
-            <h3 class="mt-4 mb-2 text-xl font-semibold text-gray-800">Achat de crédits</h3>
+            <h3 class="mt-4 mb-2 text-xl font-semibold text-gray-800" data-i18n="terms12Sub1">Achat de crédits</h3>
             <ul class="pl-5 space-y-2 list-disc">
-              <li>Les crédits sont achetés via notre système de paiement sécurisé et sont associés à votre navigateur.</li>
-              <li>Les crédits n'expirent pas et peuvent être utilisés à votre rythme.</li>
-              <li>Chaque analyse consomme 1 crédit. Les analyses déjà en cache (effectuées précédemment) sont gratuites.</li>
-              <li>Les prix et formules sont disponibles sur la page d'achat et peuvent être modifiés à tout moment avec un préavis de 30 jours pour les modifications significatives.</li>
+              <li data-i18n="terms12Sub1Li1">Les crédits sont achetés via notre système de paiement sécurisé et sont associés à votre navigateur.</li>
+              <li data-i18n="terms12Sub1Li2">Les crédits n'expirent pas et peuvent être utilisés à votre rythme.</li>
+              <li data-i18n="terms12Sub1Li3">Chaque analyse consomme 1 crédit. Les analyses déjà en cache (effectuées précédemment) sont gratuites.</li>
+              <li data-i18n="terms12Sub1Li4">Les prix et formules sont disponibles sur la page d'achat et peuvent être modifiés à tout moment avec un préavis de 30 jours pour les modifications significatives.</li>
             </ul>
 
-            <h3 class="mt-4 mb-2 text-xl font-semibold text-gray-800">Remboursement et annulation</h3>
+            <h3 class="mt-4 mb-2 text-xl font-semibold text-gray-800" data-i18n="terms12Sub2">Remboursement et annulation</h3>
             <ul class="pl-5 space-y-2 list-disc">
-              <li>Les crédits achetés ne sont pas remboursables, sauf en cas de défaut technique majeur du service.</li>
-              <li>Si une analyse échoue pour une raison technique imputable au service, le crédit vous sera automatiquement recrédité.</li>
-              <li>En cas de litige concernant une transaction, vous disposez d'un délai de 14 jours pour nous contacter.</li>
+              <li data-i18n="terms12Sub2Li1">Les crédits achetés ne sont pas remboursables, sauf en cas de défaut technique majeur du service.</li>
+              <li data-i18n="terms12Sub2Li2">Si une analyse échoue pour une raison technique imputable au service, le crédit vous sera automatiquement recrédité.</li>
+              <li data-i18n="terms12Sub2Li3">En cas de litige concernant une transaction, vous disposez d'un délai de 14 jours pour nous contacter.</li>
             </ul>
 
-            <h3 class="mt-4 mb-2 text-xl font-semibold text-gray-800">Sécurité des paiements</h3>
+            <h3 class="mt-4 mb-2 text-xl font-semibold text-gray-800" data-i18n="terms12Sub3">Sécurité des paiements</h3>
             <ul class="pl-5 space-y-2 list-disc">
-              <li>Tous les paiements sont traités par des prestataires de paiement sécurisés conformes aux normes PCI-DSS.</li>
-              <li>Nous ne stockons aucune information bancaire ou de carte de crédit sur nos serveurs.</li>
-              <li>Vous recevrez un reçu pour chaque achat effectué.</li>
+              <li data-i18n="terms12Sub3Li1">Tous les paiements sont traités par des prestataires de paiement sécurisés conformes aux normes PCI-DSS.</li>
+              <li data-i18n="terms12Sub3Li2">Nous ne stockons aucune information bancaire ou de carte de crédit sur nos serveurs.</li>
+              <li data-i18n="terms12Sub3Li3">Vous recevrez un reçu pour chaque achat effectué.</li>
             </ul>
 
-            <h3 class="mt-4 mb-2 text-xl font-semibold text-gray-800">Modifications tarifaires</h3>
-            <p>Nous nous réservons le droit de modifier nos tarifs à tout moment. Les crédits déjà achetés restent valables et ne sont pas affectés par les changements de prix futurs.</p>
+            <h3 class="mt-4 mb-2 text-xl font-semibold text-gray-800" data-i18n="terms12Sub4">Modifications tarifaires</h3>
+            <p data-i18n="terms12Sub4Content">Nous nous réservons le droit de modifier nos tarifs à tout moment. Les crédits déjà achetés restent valables et ne sont pas affectés par les changements de prix futurs.</p>
           </section>
 
           <section class="pt-6">
-            <h2 class="mb-3 text-2xl font-bold text-gray-900">13. Contact</h2>
-            <p>Questions ou préoccupations ? Contactez-nous à : <a href="mailto:cleartermsapp@outlook.com" class="font-semibold transition-colors text-primary-600 hover:text-primary-700">cleartermsapp@outlook.com</a></p>
+            <h2 class="mb-3 text-2xl font-bold text-gray-900" data-i18n="terms13Title">13. Contact</h2>
+            <p><span data-i18n="terms13Content">Questions ou préoccupations ? Contactez-nous à :</span> <a href="mailto:cleartermsapp@outlook.com" class="font-semibold transition-colors text-primary-600 hover:text-primary-700">cleartermsapp@outlook.com</a></p>
           </section>
 
-          <p class="pt-6 mt-8 italic text-gray-500 border-t border-gray-200">Dernière mise à jour : 20 octobre 2025</p>
+          <p class="pt-6 mt-8 italic text-gray-500 border-t border-gray-200" data-i18n="termsLastUpdate">Dernière mise à jour : 20 octobre 2025</p>
         </div>
 
       </div>
@@ -272,7 +297,7 @@
             </div>
             <span class="text-lg font-bold text-white">Clear Terms</span>
           </div>
-          <p class="text-sm text-gray-400">Analysez vos CGU en toute transparence grâce à l'intelligence artificielle.</p>
+          <p class="text-sm text-gray-400" data-i18n="termsFooterTagline">Analysez vos CGU en toute transparence grâce à l'intelligence artificielle.</p>
         </div>
 
         <div>
