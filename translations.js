@@ -12,7 +12,7 @@ const translations = {
     backToHome: "← Retour à l'accueil",
 
     // Hero
-    heroBadge: "20 scans gratuits à l'installation",
+    heroBadge: "10 scans gratuits à l'installation",
     heroTitle: "Comprenez enfin les <span class='gradient-text'>CGU</span> en 30 secondes.",
     heroSubtitle: "Clear Terms analyse instantanément les CGU et vous révèle les clauses cachées. Voyez immédiatement ce qui est acceptable, ambigu ou risqué.",
     heroCtaPrimary: "Installer gratuitement",
@@ -46,7 +46,7 @@ const translations = {
     howSubtitle: "En 3 étapes simples",
 
     step1Title: "Installez l'extension",
-    step1Desc: "Gratuite. 20 analyses offertes. Sans compte ni carte bancaire.",
+    step1Desc: "Gratuite. 10 analyses offertes. Sans compte ni carte bancaire.",
 
     step2Title: "Naviguez normalement",
     step2Desc: "Sur une page de CGU, vous êtes alerté et vous pouvez lancer une analyse.",
@@ -57,27 +57,27 @@ const translations = {
     // Pricing
     pricingBadge: "Tarification transparente",
     pricingTitle: "Commencez <span class='gradient-text'>gratuitement</span>",
-    pricingSubtitle: "20 analyses offertes à l'installation. Rechargez uniquement si besoin.",
+    pricingSubtitle: "10 analyses offertes à l'installation. Rechargez uniquement si besoin.",
 
-    pricingFeature1: "20 scans offerts sans carte bancaire",
+    pricingFeature1: "10 scans offerts sans carte bancaire",
     pricingFeature2: "Historique illimité et gratuit",
     pricingFeature3: "Recharges dès 2€ (sans engagement)",
     pricingFeature4: "Pas d'abonnement, payez ce que vous utilisez",
 
     pricingFrom: "À partir de",
     pricingAmount: "2€",
-    pricingScans: "20 analyses supplémentaires",
+    pricingScans: "10 analyses supplémentaires",
     pricingPacksTitle: "Packs disponibles",
-    pricingPack1: "20 scans • 2€",
-    pricingPack2: "100 scans • 5€",
-    pricingPack3: "1000 scans • 20€",
+    pricingPack1: "10 scans • 2€",
+    pricingPack2: "30 scans • 5€",
+    pricingPack3: "100 scans • 10€",
     pricingCta: "Commencer gratuitement",
 
     // CTA
     ctaTitle: "Reprenez le contrôle de vos données",
     ctaSubtitle: "Installez Clear Terms et ne signez plus à l'aveugle.",
     ctaButton: "Installer maintenant gratuitement",
-    ctaBenefits: "✓ Installation instantanée • ✓ 20 scans offerts • ✓ Aucun compte requis",
+    ctaBenefits: "✓ Installation instantanée • ✓ 10 scans offerts • ✓ Aucun compte requis",
 
     // Footer
     footerTagline: "Analysez vos CGU en toute transparence grâce à l'intelligence artificielle.",
@@ -170,7 +170,7 @@ const translations = {
     terms11Content: "Nous pouvons mettre à jour ces Conditions de Service de temps à autre. Si nous apportons des modifications importantes, nous vous en informerons via l'extension avec un délai de préavis de 30 jours. Si vous n'acceptez pas les nouvelles conditions, vous pouvez cesser d'utiliser l'extension en la désinstallant avant l'entrée en vigueur des modifications. L'utilisation continue du service après ce délai constitue votre acceptation des nouvelles conditions.",
 
     terms12Title: "12. Paiement et crédits",
-    terms12Content: "Clear Terms fonctionne sur un système de crédits d'analyse. Les 20 premières analyses sont gratuites pour découvrir le service.",
+    terms12Content: "Clear Terms fonctionne sur un système de crédits d'analyse. Les 10 premières analyses sont gratuites pour découvrir le service.",
     terms12Sub1: "Achat de crédits",
     terms12Sub1Li1: "Les crédits sont achetés via notre système de paiement sécurisé et sont associés à votre navigateur.",
     terms12Sub1Li2: "Les crédits n'expirent pas et peuvent être utilisés à votre rythme.",
@@ -207,7 +207,7 @@ const translations = {
     backToHome: "← Back to home",
 
     // Hero
-    heroBadge: "20 free scans at installation",
+    heroBadge: "10 free scans at installation",
     heroTitle: "Understand your <span class='gradient-text'>Terms</span> in 30 seconds.",
     heroSubtitle: "Clear Terms instantly analyzes Terms & Conditions and reveals hidden clauses. Instantly see what's acceptable, ambiguous or risky.",
     heroCtaPrimary: "Install for free",
@@ -241,7 +241,7 @@ const translations = {
     howSubtitle: "In 3 simple steps",
 
     step1Title: "Install the extension",
-    step1Desc: "Free. 20 analyses offered. No account or credit card needed.",
+    step1Desc: "Free. 10 analyses offered. No account or credit card needed.",
 
     step2Title: "Browse as usual",
     step2Desc: "On a ToS page, you're alerted and can launch an analysis.",
@@ -252,27 +252,27 @@ const translations = {
     // Pricing
     pricingBadge: "Transparent pricing",
     pricingTitle: "Start <span class='gradient-text'>for free</span>",
-    pricingSubtitle: "20 analyses offered at installation. Buy credits only if you need them.",
+    pricingSubtitle: "10 analyses offered at installation. Buy credits only if you need them.",
 
-    pricingFeature1: "20 free scans, no credit card",
+    pricingFeature1: "10 free scans, no credit card",
     pricingFeature2: "Unlimited and free history",
     pricingFeature3: "Recharges from €2 (no commitment)",
     pricingFeature4: "No subscription, pay as you go",
 
     pricingFrom: "From",
     pricingAmount: "€2",
-    pricingScans: "20 additional analyses",
+    pricingScans: "10 additional analyses",
     pricingPacksTitle: "Available packs",
-    pricingPack1: "20 scans • €2",
-    pricingPack2: "100 scans • €5",
-    pricingPack3: "1000 scans • €20",
+    pricingPack1: "10 scans • €2",
+    pricingPack2: "30 scans • €5",
+    pricingPack3: "100 scans • €10",
     pricingCta: "Start for free",
 
     // CTA
     ctaTitle: "Take back control of your data",
     ctaSubtitle: "Install Clear Terms and stop signing blindly.",
     ctaButton: "Install now for free",
-    ctaBenefits: "✓ Instant installation • ✓ 20 scans offered • ✓ No account required",
+    ctaBenefits: "✓ Instant installation • ✓ 10 scans offered • ✓ No account required",
 
     // Footer
     footerTagline: "Analyze your ToS transparently with artificial intelligence.",
@@ -365,7 +365,7 @@ const translations = {
     terms11Content: "We may update these Terms of Service from time to time. If we make significant changes, we will notify you through the extension with 30 days' notice. If you do not accept the new terms, you can stop using the extension by uninstalling it before the changes take effect. Continued use of the service after this period constitutes your acceptance of the new terms.",
 
     terms12Title: "12. Payment and Credits",
-    terms12Content: "Clear Terms operates on an analysis credit system. The first 20 analyses are free to discover the service.",
+    terms12Content: "Clear Terms operates on an analysis credit system. The first 10 analyses are free to discover the service.",
     terms12Sub1: "Purchasing Credits",
     terms12Sub1Li1: "Credits are purchased through our secure payment system and are associated with your browser.",
     terms12Sub1Li2: "Credits do not expire and can be used at your own pace.",
