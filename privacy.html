@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Politique de Confidentialité - Clear Terms</title>
+  <meta name="description" content="Politique de Confidentialité de Clear Terms">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              300: '#7dd3fc',
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e',
+            },
+            secondary: {
+              50: '#faf5ff',
+              100: '#f3e8ff',
+              200: '#e9d5ff',
+              300: '#d8b4fe',
+              400: '#c084fc',
+              500: '#a855f7',
+              600: '#9333ea',
+              700: '#7e22ce',
+              800: '#6b21a8',
+              900: '#581c87',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            display: ['Manrope', 'Inter', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- Translations -->
+  <script src="translations.js"></script>
+
+  <style>
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Manrope', 'Inter', system-ui, sans-serif;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #0ea5e9 0%, #a855f7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .gradient-bg {
+      background: linear-gradient(135deg, #0ea5e9 0%, #a855f7 100%);
+    }
+
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+  </style>
+</head>
+
+<body class="antialiased text-gray-900 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 glass-effect">
+    <div class="px-6 py-4 mx-auto max-w-7xl">
+      <div class="flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="relative flex items-center justify-center w-10 h-10 rounded-lg gradient-bg">
+            <!-- Loupe -->
+            <svg class="absolute w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/>
+              <path stroke-linecap="round" d="M21 21l-4.35-4.35"/>
+            </svg>
+            <!-- Check à l'intérieur -->
+            <svg class="absolute w-2.5 h-2.5 text-white" style="transform: translate(-1px, -1px);" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="4">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+            </svg>
+          </div>
+          <span class="text-xl font-bold gradient-text">Clear Terms</span>
+        </a>
+
+        <div class="flex items-center gap-6">
+          <!-- Language Selector -->
+          <div class="relative" id="language-dropdown">
+            <button id="lang-toggle" class="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 transition-colors bg-white border border-gray-200 rounded-lg hover:bg-gray-50">
+              <span id="current-flag" class="text-lg">🇫🇷</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div id="lang-menu" class="absolute right-0 z-50 hidden w-32 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg">
+              <button data-lang="fr" class="flex items-center w-full gap-3 px-4 py-2 text-sm text-left text-gray-700 transition-colors hover:bg-gray-50 rounded-t-lg">
+                <span class="text-lg">🇫🇷</span>
+                <span>Français</span>
+              </button>
+              <button data-lang="en" class="flex items-center w-full gap-3 px-4 py-2 text-sm text-left text-gray-700 transition-colors hover:bg-gray-50 rounded-b-lg">
+                <span class="text-lg">🇬🇧</span>
+                <span>English</span>
+              </button>
+            </div>
+          </div>
+
+          <a href="index.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-primary-600" data-i18n="termsBackToHome">← Retour à la page</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="px-6 pt-32 pb-20">
+    <div class="max-w-4xl mx-auto">
+      <div class="p-8 bg-white shadow-xl md:p-12 rounded-3xl">
+
+        <h1 class="mb-6 text-4xl font-bold md:text-5xl gradient-text" data-i18n="privacyTitle">Politique de Confidentialité</h1>
+
+        <div class="space-y-6 text-sm leading-relaxed text-gray-700">
+          <p class="italic text-gray-500" data-i18n="privacyEffectiveDate">Dernière mise à jour : 27 octobre 2025</p>
+
+          <section class="pt-6">
+            <h2 class="mb-3 text-2xl font-bold text-gray-900" data-i18n="privacy1Title">Données Collectées</h2>
+            <p data-i18n="privacy1Content">Clear Terms ne collecte <strong>aucune donnée personnelle identifiable</strong>.</p>
+
+            <h3 class="mt-4 mb-2 text-xl font-semibold text-gray-800" data-i18n="privacy1Sub1">Données Traitées Localement</h3>
+            <ul class="pl-5 space-y-2 list-disc">
+              <li data-i18n="privacy1Sub1Li1"><strong>Contenu des pages</strong> : Le texte des pages CGU/Politique de Confidentialité est extrait temporairement pour analyse</li>
+              <li data-i18n="privacy1Sub1Li2"><strong>Historique d'analyse</strong> : Stocké localement dans votre navigateur</li>
+              <li data-i18n="privacy1Sub1Li3"><strong>Préférences</strong> : Langue, paramètres d'affichage stockés localement dans votre navigateur</li>
+            </ul>
+
+            <h3 class="mt-4 mb-2 text-xl font-semibold text-gray-800" data-i18n="privacy1Sub2">Données Envoyées au Backend</h3>
+            <ul class="pl-5 space-y-2 list-disc">
+              <li data-i18n="privacy1Sub2Li1"><strong>Hash anonyme</strong> : Un identifiant unique généré à partir du contenu de la page</li>
+              <li data-i18n="privacy1Sub2Li2"><strong>Contenu de page</strong> : Envoyé à notre API pour analyse IA (non associé à votre identité)</li>
+              <li data-i18n="privacy1Sub2Li3"><strong>URL de la page</strong> : Uniquement pour contextualiser l'analyse</li>
+            </ul>
+
+            <p class="mt-4 font-semibold text-gray-900" data-i18n="privacy1Important"><strong>Important</strong> : Aucun cookie, aucune donnée de navigation, aucun identifiant utilisateur n'est collecté.</p>
+          </section>
+
+          <section class="pt-6">
+            <h2 class="mb-3 text-2xl font-bold text-gray-900" data-i18n="privacy2Title">Utilisation des Données</h2>
+            <p data-i18n="privacy2Content">Les données sont utilisées exclusivement pour :</p>
+            <ul class="pl-5 mt-2 space-y-2 list-disc">
+              <li data-i18n="privacy2Li1">Analyser les conditions générales avec l'IA</li>
+              <li data-i18n="privacy2Li2">Générer un score de confiance (A-E)</li>
+              <li data-i18n="privacy2Li3">Mettre en cache les résultats pour éviter les analyses redondantes</li>
+            </ul>
+          </section>
+
+          <section class="pt-6">
+            <h2 class="mb-3 text-2xl font-bold text-gray-900" data-i18n="privacy3Title">Stockage et Sécurité</h2>
+            <ul class="pl-5 space-y-2 list-disc">
+              <li data-i18n="privacy3Li1"><strong>Stockage local</strong> : Historique et préférences stockés dans votre navigateur uniquement</li>
+              <li data-i18n="privacy3Li2"><strong>Cache backend</strong> : Les analyses sont mises en cache temporairement par hash anonyme</li>
+              <li data-i18n="privacy3Li3"><strong>Aucune base de données personnelle</strong> : Aucun compte utilisateur, aucune donnée identifiable stockée</li>
+            </ul>
+          </section>
+
+          <section class="pt-6">
+            <h2 class="mb-3 text-2xl font-bold text-gray-900" data-i18n="privacy4Title">Partage des Données</h2>
+            <p data-i18n="privacy4Content">Nous <strong>ne vendons, ne louons, ni ne partageons</strong> vos données avec des tiers.</p>
+            <p class="mt-2" data-i18n="privacy4Content2">Les seuls traitements externes sont :</p>
+            <ul class="pl-5 mt-2 space-y-2 list-disc">
+              <li data-i18n="privacy4Li1"><strong>API Gemini (Google)</strong> : Pour l'analyse IA du contenu des CGU</li>
+              <li data-i18n="privacy4Li2"><strong>Hébergement backend</strong> : Serveur sécurisé</li>
+            </ul>
+          </section>
+
+          <section class="pt-6">
+            <h2 class="mb-3 text-2xl font-bold text-gray-900" data-i18n="privacy5Title">Vos Droits (RGPD)</h2>
+            <p data-i18n="privacy5Content">Étant donné que nous ne collectons aucune donnée personnelle identifiable, les droits RGPD standards ne s'appliquent pas directement. Cependant :</p>
+            <ul class="pl-5 mt-2 space-y-2 list-disc">
+              <li data-i18n="privacy5Li1">Vous pouvez effacer votre historique local sur l'extension</li>
+              <li data-i18n="privacy5Li2">Vous pouvez désinstaller l'extension à tout moment</li>
+            </ul>
+          </section>
+
+          <section class="pt-6">
+            <h2 class="mb-3 text-2xl font-bold text-gray-900" data-i18n="privacy6Title">Modifications</h2>
+            <p data-i18n="privacy6Content">Cette politique peut être mise à jour. Les changements significatifs seront communiqués via les notes de version de l'extension.</p>
+          </section>
+
+          <section class="pt-6">
+            <h2 class="mb-3 text-2xl font-bold text-gray-900" data-i18n="privacy7Title">Contact</h2>
+            <p><span data-i18n="privacy7Content">Pour toute question :</span> <a href="mailto:cleartermsapp@outlook.com" class="font-semibold transition-colors text-primary-600 hover:text-primary-700">cleartermsapp@outlook.com</a></p>
+          </section>
+
+          <p class="pt-6 mt-8 italic text-gray-500 border-t border-gray-200" data-i18n="privacyLastUpdate">Dernière mise à jour : 27 octobre 2025</p>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="px-6 py-12 bg-gray-900">
+    <div class="mx-auto max-w-7xl">
+      <div class="grid gap-8 md:grid-cols-3">
+
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <div class="relative flex items-center justify-center w-8 h-8 rounded-lg gradient-bg">
+              <svg class="absolute w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/>
+                <path stroke-linecap="round" d="M21 21l-4.35-4.35"/>
+              </svg>
+              <svg class="absolute w-2 h-2 text-white" style="transform: translate(-1px, -1px);" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+              </svg>
+            </div>
+            <span class="text-lg font-bold text-white">Clear Terms</span>
+          </div>
+          <p class="text-sm text-gray-400" data-i18n="termsFooterTagline">Analysez vos CGU en toute transparence grâce à l'intelligence artificielle.</p>
+        </div>
+
+        <div>
+          <h4 class="mb-4 text-sm font-semibold text-white">Liens rapides</h4>
+          <div class="space-y-2">
+            <a href="index.html#features" class="block text-sm text-gray-400 transition-colors hover:text-white">Fonctionnalités</a>
+            <a href="index.html#how-it-works" class="block text-sm text-gray-400 transition-colors hover:text-white">Comment ça marche</a>
+            <a href="index.html#pricing" class="block text-sm text-gray-400 transition-colors hover:text-white">Tarifs</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="mb-4 text-sm font-semibold text-white">Contact</h4>
+          <div class="space-y-2">
+            <a href="mailto:cleartermsapp@outlook.com" class="block text-sm text-gray-400 transition-colors hover:text-white">cleartermsapp@outlook.com</a>
+            <a href="terms.html" class="block text-sm text-gray-400 transition-colors hover:text-white">Conditions d'utilisation</a>
+            <a href="privacy.html" class="block text-sm text-gray-400 transition-colors hover:text-white">Politique de confidentialité</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 mt-8 text-center border-t border-gray-800">
+        <p class="text-sm text-gray-400">© 2025 Clear Terms. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

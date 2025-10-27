@@ -192,6 +192,52 @@ const translations = {
 
     termsLastUpdate: "Dernière mise à jour : 20 octobre 2025",
     termsFooterTagline: "Analysez vos CGU en toute transparence grâce à l'intelligence artificielle.",
+
+    // Privacy page
+    privacyTitle: "Politique de Confidentialité",
+    privacyEffectiveDate: "Dernière mise à jour : 27 octobre 2025",
+
+    privacy1Title: "Données Collectées",
+    privacy1Content: "Clear Terms ne collecte <strong>aucune donnée personnelle identifiable</strong>.",
+    privacy1Sub1: "Données Traitées Localement",
+    privacy1Sub1Li1: "<strong>Contenu des pages</strong> : Le texte des pages CGU/Politique de Confidentialité est extrait temporairement pour analyse",
+    privacy1Sub1Li2: "<strong>Historique d'analyse</strong> : Stocké localement dans votre navigateur",
+    privacy1Sub1Li3: "<strong>Préférences</strong> : Langue, paramètres d'affichage stockés localement dans votre navigateur",
+    privacy1Sub2: "Données Envoyées au Backend",
+    privacy1Sub2Li1: "<strong>Hash anonyme</strong> : Un identifiant unique généré à partir du contenu de la page",
+    privacy1Sub2Li2: "<strong>Contenu de page</strong> : Envoyé à notre API pour analyse IA (non associé à votre identité)",
+    privacy1Sub2Li3: "<strong>URL de la page</strong> : Uniquement pour contextualiser l'analyse",
+    privacy1Important: "<strong>Important</strong> : Aucun cookie, aucune donnée de navigation, aucun identifiant utilisateur n'est collecté.",
+
+    privacy2Title: "Utilisation des Données",
+    privacy2Content: "Les données sont utilisées exclusivement pour :",
+    privacy2Li1: "Analyser les conditions générales avec l'IA",
+    privacy2Li2: "Générer un score de confiance (A-E)",
+    privacy2Li3: "Mettre en cache les résultats pour éviter les analyses redondantes",
+
+    privacy3Title: "Stockage et Sécurité",
+    privacy3Li1: "<strong>Stockage local</strong> : Historique et préférences stockés dans votre navigateur uniquement",
+    privacy3Li2: "<strong>Cache backend</strong> : Les analyses sont mises en cache temporairement par hash anonyme",
+    privacy3Li3: "<strong>Aucune base de données personnelle</strong> : Aucun compte utilisateur, aucune donnée identifiable stockée",
+
+    privacy4Title: "Partage des Données",
+    privacy4Content: "Nous <strong>ne vendons, ne louons, ni ne partageons</strong> vos données avec des tiers.",
+    privacy4Content2: "Les seuls traitements externes sont :",
+    privacy4Li1: "<strong>API Gemini (Google)</strong> : Pour l'analyse IA du contenu des CGU",
+    privacy4Li2: "<strong>Hébergement backend</strong> : Serveur sécurisé",
+
+    privacy5Title: "Vos Droits (RGPD)",
+    privacy5Content: "Étant donné que nous ne collectons aucune donnée personnelle identifiable, les droits RGPD standards ne s'appliquent pas directement. Cependant :",
+    privacy5Li1: "Vous pouvez effacer votre historique local sur l'extension",
+    privacy5Li2: "Vous pouvez désinstaller l'extension à tout moment",
+
+    privacy6Title: "Modifications",
+    privacy6Content: "Cette politique peut être mise à jour. Les changements significatifs seront communiqués via les notes de version de l'extension.",
+
+    privacy7Title: "Contact",
+    privacy7Content: "Pour toute question :",
+
+    privacyLastUpdate: "Dernière mise à jour : 27 octobre 2025",
   },
 
   en: {
@@ -387,6 +433,52 @@ const translations = {
 
     termsLastUpdate: "Last updated: October 20, 2025",
     termsFooterTagline: "Analyze your ToS transparently with artificial intelligence.",
+
+    // Privacy page
+    privacyTitle: "Privacy Policy",
+    privacyEffectiveDate: "Last updated: October 27, 2025",
+
+    privacy1Title: "Data Collected",
+    privacy1Content: "Clear Terms does not collect <strong>any personally identifiable information</strong>.",
+    privacy1Sub1: "Locally Processed Data",
+    privacy1Sub1Li1: "<strong>Page content</strong>: The text of ToS/Privacy Policy pages is temporarily extracted for analysis",
+    privacy1Sub1Li2: "<strong>Analysis history</strong>: Stored locally in your browser",
+    privacy1Sub1Li3: "<strong>Preferences</strong>: Language, display settings stored locally in your browser",
+    privacy1Sub2: "Data Sent to Backend",
+    privacy1Sub2Li1: "<strong>Anonymous hash</strong>: A unique identifier generated from the page content",
+    privacy1Sub2Li2: "<strong>Page content</strong>: Sent to our API for AI analysis (not associated with your identity)",
+    privacy1Sub2Li3: "<strong>Page URL</strong>: Only to contextualize the analysis",
+    privacy1Important: "<strong>Important</strong>: No cookies, no browsing data, no user identifiers are collected.",
+
+    privacy2Title: "Use of Data",
+    privacy2Content: "Data is used exclusively to:",
+    privacy2Li1: "Analyze terms and conditions with AI",
+    privacy2Li2: "Generate a trust score (A-E)",
+    privacy2Li3: "Cache results to avoid redundant analyses",
+
+    privacy3Title: "Storage and Security",
+    privacy3Li1: "<strong>Local storage</strong>: History and preferences stored in your browser only",
+    privacy3Li2: "<strong>Backend cache</strong>: Analyses are temporarily cached by anonymous hash",
+    privacy3Li3: "<strong>No personal database</strong>: No user account, no identifiable data stored",
+
+    privacy4Title: "Data Sharing",
+    privacy4Content: "We <strong>do not sell, rent, or share</strong> your data with third parties.",
+    privacy4Content2: "The only external processing is:",
+    privacy4Li1: "<strong>Gemini API (Google)</strong>: For AI analysis of ToS content",
+    privacy4Li2: "<strong>Backend hosting</strong>: Secure server",
+
+    privacy5Title: "Your Rights (GDPR)",
+    privacy5Content: "Since we do not collect any personally identifiable information, standard GDPR rights do not directly apply. However:",
+    privacy5Li1: "You can delete your local history in the extension",
+    privacy5Li2: "You can uninstall the extension at any time",
+
+    privacy6Title: "Changes",
+    privacy6Content: "This policy may be updated. Significant changes will be communicated via the extension's release notes.",
+
+    privacy7Title: "Contact",
+    privacy7Content: "For any questions:",
+
+    privacyLastUpdate: "Last updated: October 27, 2025",
   }
 };
 
